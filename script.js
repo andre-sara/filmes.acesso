@@ -3,7 +3,7 @@ const movies = [
   {
     title: "Homem-Aranha",
     image: "https://upload.wikimedia.org/wikipedia/pt/0/0c/Spider-Man_poster.jpg",
-    enabled: true,  // habilitado
+    enabled: false, // desabilitado
     episodes: [
       { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
     ],
@@ -11,7 +11,7 @@ const movies = [
   {
     title: "Naruto",
     image: "https://upload.wikimedia.org/wikipedia/pt/7/7f/Naruto_Uzumaki.png",
-    enabled: false, // desabilitado
+    enabled: true,  // habilitado
     episodes: [
       {
         name: "Temporada 1 - Episódio 1",
@@ -102,3 +102,4 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
