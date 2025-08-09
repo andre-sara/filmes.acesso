@@ -70,16 +70,14 @@ backBtn.onclick = () => {
   library.classList.remove("hidden");
 };
 
-// Exibe o modal se a URL terminar com / ou não tiver arquivo especificado
+// Verifica o caminho atual
 const path = window.location.pathname;
-
-// Remover barra no final, se houver
+// Remove barra final se existir (e o caminho tiver mais que 1 caractere)
 const cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
-
-// Mostrar modal se estiver na raiz (ex: "/filmes.acesso" ou "/filmes.acesso/")
+// Define caminhos raiz para mostrar modal
 const rootPaths = ["/filmes.acesso", "/"];
 
-// Checa se o path limpo está na raiz
+// Mostra modal se estiver em raiz
 const showModal = rootPaths.includes(cleanPath);
 
 if (showModal) {
@@ -88,7 +86,7 @@ if (showModal) {
   details.classList.add("hidden");
 } else {
   termsModal.style.display = "none";
-};
+}
 
 // Botão aceitar termos
 acceptBtn.onclick = () => {
@@ -97,5 +95,3 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
-
-
