@@ -70,19 +70,19 @@ backBtn.onclick = () => {
   library.classList.remove("hidden");
 };
 
-// Modal - mostra no carregamento da página
-window.onload = () => {
-  // Mostrar modal na página inicial (index.html)
-  if (
-    window.location.pathname.endsWith("index.html") ||
-    window.location.pathname === "/"
-  ) {
-    termsModal.style.display = "flex";
-    library.classList.add("hidden");
-    details.classList.add("hidden");
-  } else {
-    termsModal.style.display = "none";
-  }
+// Exibe o modal se a URL terminar com / ou não tiver arquivo especificado
+const path = window.location.pathname;
+
+// Verifica se o caminho termina com "/" ou não contém um arquivo específico (ex: index.html)
+const showModal = path.endsWith("/") || !path.includes(".");
+
+if (showModal) {
+  termsModal.style.display = "flex";
+  library.classList.add("hidden");
+  details.classList.add("hidden");
+} else {
+  termsModal.style.display = "none";
+}
 };
 
 // Botão aceitar termos
@@ -92,3 +92,4 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
