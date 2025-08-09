@@ -75,7 +75,11 @@ const path = window.location.pathname;
 // Remove barra final se existir (e o caminho tiver mais que 1 caractere)
 const cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
 // Define caminhos raiz para mostrar modal
-const rootPaths = ["/filmes.acesso", "/"];
+const rootPaths = [
+  "/filmes.acesso",
+  "/filmes.acesso/index.html",
+  "/"
+];
 
 // Mostra modal se estiver em raiz
 const showModal = rootPaths.includes(cleanPath);
@@ -95,3 +99,4 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
