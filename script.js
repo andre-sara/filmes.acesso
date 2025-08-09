@@ -28,21 +28,20 @@ const details = document.getElementById("details");
 const movieTitle = document.getElementById("movieTitle");
 const episodesList = document.getElementById("episodesList");
 const backBtn = document.getElementById("backBtn");
+
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
-let cardsVisible = true; // estado para controlar exibição dos cards
-
-// Função para carregar biblioteca (exibe o menu)
+// Carregar biblioteca (exibe o menu)
 function loadLibrary() {
   library.innerHTML = "";
   movies.forEach((movie, index) => {
     const card = document.createElement("div");
     card.classList.add("card");
-    card.innerHTML = `
+    card.innerHTML = 
       <img src="${movie.image}" alt="${movie.title}" />
       <div class="card-title">${movie.title}</div>
-    `;
+    ;
     card.onclick = () => showDetails(index);
     library.appendChild(card);
   });
@@ -60,7 +59,7 @@ function showDetails(index) {
   movie.episodes.forEach((ep) => {
     const epDiv = document.createElement("div");
     epDiv.classList.add("episode");
-    epDiv.innerHTML = `<a href="${ep.link}" target="_blank">${ep.name}</a>`;
+    epDiv.innerHTML = <a href="${ep.link}" target="_blank">${ep.name}</a>;
     episodesList.appendChild(epDiv);
   });
 }
@@ -70,35 +69,6 @@ backBtn.onclick = () => {
   details.classList.add("hidden");
   library.classList.remove("hidden");
 };
-
-// Função para alternar visibilidade dos cards
-function toggleCards() {
-  cardsVisible = !cardsVisible;
-  if (cardsVisible) {
-    library.style.display = "grid"; // mostra os cards
-    toggleBtn.textContent = "Esconder Quadros";
-  } else {
-    library.style.display = "none"; // esconde os cards
-    toggleBtn.textContent = "Mostrar Quadros";
-  }
-}
-
-// Criar botão para habilitar/desabilitar quadros
-const toggleBtn = document.createElement("button");
-toggleBtn.textContent = "Esconder Quadros";
-toggleBtn.style.margin = "10px auto";
-toggleBtn.style.display = "block";
-toggleBtn.style.padding = "10px 20px";
-toggleBtn.style.cursor = "pointer";
-toggleBtn.style.fontWeight = "700";
-toggleBtn.style.backgroundColor = "#00ff88";
-toggleBtn.style.border = "none";
-toggleBtn.style.borderRadius = "8px";
-toggleBtn.style.color = "#121212";
-toggleBtn.addEventListener("click", toggleCards);
-
-// Inserir botão antes da biblioteca
-library.parentNode.insertBefore(toggleBtn, library);
 
 // Verifica o caminho atual
 const path = window.location.pathname;
@@ -118,10 +88,8 @@ if (showModal) {
   termsModal.style.display = "flex";
   library.classList.add("hidden");
   details.classList.add("hidden");
-  toggleBtn.style.display = "none"; // esconder botão junto com biblioteca
 } else {
   termsModal.style.display = "none";
-  toggleBtn.style.display = "block";
 }
 
 // Botão aceitar termos
@@ -129,6 +97,5 @@ acceptBtn.onclick = () => {
   termsModal.style.display = "none";
   library.classList.remove("hidden");
   details.classList.add("hidden");
-  toggleBtn.style.display = "block";
   loadLibrary();
 };
