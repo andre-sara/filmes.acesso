@@ -11,7 +11,7 @@ body {
 
 header {
   background: #00ff88;
-  padding: 4px 8px; /* altura menor */
+  padding: 2px 4px; /* altura menor */
   text-align: center;
   color: #121212;
   font-weight: 700;
@@ -203,3 +203,4 @@ header {
 #acceptBtn:hover {
   background-color: #00cc6a;
 }
+
