@@ -23,17 +23,12 @@ header {
 /* Grid filmes */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   gap: 18px;
   padding: 20px;
-  /* Removi flex-grow para não ocupar todo espaço disponível */
+  flex-grow: 1;
   overflow-y: auto;
-
-  height: 400px;      /* altura fixa */
-  max-width: 400px;   /* largura máxima para deixar quadrado */
-  margin: 0 auto;     /* centraliza horizontalmente */
 }
-
 
 /* Cards menores e retangulares */
 .card {
@@ -208,5 +203,3 @@ header {
 #acceptBtn:hover {
   background-color: #00cc6a;
 }
-
-
