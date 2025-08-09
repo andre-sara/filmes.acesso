@@ -73,7 +73,10 @@ backBtn.onclick = () => {
 // Modal - mostra no carregamento da página
 window.onload = () => {
   // Mostrar modal na página inicial (index.html)
-  if (window.location.pathname.endsWith("index.html") || window.location.pathname === "/" ) {
+  if (
+    window.location.pathname.endsWith("index.html") ||
+    window.location.pathname === "/"
+  ) {
     termsModal.style.display = "flex";
     library.classList.add("hidden");
     details.classList.add("hidden");
