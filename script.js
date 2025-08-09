@@ -1,15 +1,17 @@
-// Lista de filmes (exemplo)
+// Lista de filmes com propriedade "enabled" para controlar visibilidade
 const movies = [
   {
     title: "Homem-Aranha",
     image: "https://upload.wikimedia.org/wikipedia/pt/0/0c/Spider-Man_poster.jpg",
+    enabled: true,  // habilitado
     episodes: [
       { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
     ],
   },
   {
-    title: "Naruto",
+    title: "Instituto",
     image: "https://upload.wikimedia.org/wikipedia/pt/7/7f/Naruto_Uzumaki.png",
+    enabled: false, // desabilitado
     episodes: [
       {
         name: "Temporada 1 - Episódio 1",
@@ -32,16 +34,17 @@ const backBtn = document.getElementById("backBtn");
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
-// Carregar biblioteca (exibe o menu)
+// Carregar biblioteca (exibe o menu) mostrando somente filmes habilitados
 function loadLibrary() {
   library.innerHTML = "";
   movies.forEach((movie, index) => {
+    if (!movie.enabled) return;  // Pula filmes desabilitados
     const card = document.createElement("div");
     card.classList.add("card");
-    card.innerHTML = 
+    card.innerHTML = `
       <img src="${movie.image}" alt="${movie.title}" />
       <div class="card-title">${movie.title}</div>
-    ;
+    `;
     card.onclick = () => showDetails(index);
     library.appendChild(card);
   });
@@ -59,7 +62,7 @@ function showDetails(index) {
   movie.episodes.forEach((ep) => {
     const epDiv = document.createElement("div");
     epDiv.classList.add("episode");
-    epDiv.innerHTML = <a href="${ep.link}" target="_blank">${ep.name}</a>;
+    epDiv.innerHTML = `<a href="${ep.link}" target="_blank">${ep.name}</a>`;
     episodesList.appendChild(epDiv);
   });
 }
