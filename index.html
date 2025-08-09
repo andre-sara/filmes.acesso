@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Biblioteca de Filmes</title>
-<link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biblioteca de Filmes</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<header>
-  <h1>Minha Biblioteca</h1>
-</header>
-
-<!-- Modal de termos -->
-<div id="termsModal" class="modal">
-  <div class="modal-content">
-    <h2>Política de Uso e Termos de Responsabilidade</h2>
-    <div class="modal-text">
-      <p><strong>1. Conteúdo:</strong> Todos os filmes, séries e desenhos disponíveis neste site não são de nossa autoria ou propriedade. Apenas indexamos links de fontes públicas.</p>
-      <p><strong>2. Direitos Autorais e Responsabilidade:</strong> Não somos responsáveis por mau uso, falhas técnicas ou conteúdos de terceiros. Nosso site não exibe anúncios próprios.</p>
-      <p><strong>3. Problemas Técnicos:</strong> Caso encontre falhas, entre em contato via WhatsApp com prints para análise.</p>
-      <p><strong>4. Disponibilidade:</strong> Site criado em 07/08/2025, novos conteúdos serão adicionados mediante pedidos. Colaborações são bem-vindas.</p>
-      <p><strong>5. Idioma e Segurança:</strong> Conteúdos dublados em Português do Brasil, sem opção de download para segurança contra vírus.</p>
-      <p><strong>6. Uso Indevido:</strong> Uso ilegal ou prejudicial é proibido. Reservamo-nos o direito de remover conteúdos sem aviso.</p>
-      <p>Ao prosseguir, você concorda com todos os termos acima.</p>
+  <!-- Modal Termos -->
+  <div id="termsModal" class="modal">
+    <div class="modal-content">
+      <h2>Política de Uso</h2>
+      <p>
+        Os filmes não são nossos, apenas indexamos links de fontes existentes.<br>
+        Não somos responsáveis por mau uso, falhas ou danos causados.<br>
+        Em caso de problemas com filmes ou player, entre em contato pelo WhatsApp e envie prints.<br>
+        Nosso site é novo (07/08/2025), base de filmes será ampliada mediante pedidos.<br>
+        Sem anúncios no site, caso veja anúncios indevidos, reporte pelo WhatsApp.<br>
+        Conteúdos são apenas dublados em Português do Brasil.<br>
+        Não disponibilizamos downloads para garantir sua segurança.<br>
+        Site pode sair do ar sem aviso.<br>
+        Interessados em ajudar no projeto, entrem em contato.
+      </p>
+      <button id="acceptBtn">Li e Aceito</button>
     </div>
-    <button id="acceptBtn">Li e Aceito</button>
   </div>
-</div>
 
-<!-- Área dos filmes -->
-<main id="library" class="grid-container hidden"></main>
+  <!-- Biblioteca -->
+  <div id="library" class="library">
+    <h1 class="library-title">Biblioteca de Filmes</h1>
+    <div class="underline"></div>
+  </div>
 
-<!-- Área de temporadas/episódios -->
-<section id="details" class="hidden">
-  <button id="backBtn">⬅ Voltar</button>
-  <h2 id="movieTitle"></h2>
-  <div id="episodesList"></div>
-</section>
+  <!-- Detalhes de Episódios -->
+  <div id="details" class="hidden">
+    <button id="backBtn" class="back-btn">&larr; Voltar</button>
+    <h2 id="movieTitle"></h2>
+    <div id="episodesList"></div>
+  </div>
 
-<!-- Botão WhatsApp -->
-    <a id="whatsappBtn" href="https://wa.me/244956669394?text=Ol%C3%A1%2C%20acessei%20sua%20biblioteca%20de%20filmes%20no%20site%21" target="_blank">
-    💬
-    </a>
+  <!-- Botão WhatsApp -->
+  <a
+    href="https://wa.me/244XXXXXXXXX?text=Ol%C3%A1%2C%20acessei%20sua%20biblioteca%20de%20filmes%20no%20site%21"
+    target="_blank"
+    id="whatsappBtn"
+    title="Contato WhatsApp"
+  >
+    &#128222;
+  </a>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
-
