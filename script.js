@@ -28,11 +28,12 @@ const details = document.getElementById("details");
 const movieTitle = document.getElementById("movieTitle");
 const episodesList = document.getElementById("episodesList");
 const backBtn = document.getElementById("backBtn");
-
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
-// Carregar biblioteca (exibe o menu)
+let cardsVisible = true; // estado para controlar exibição dos cards
+
+// Função para carregar biblioteca (exibe o menu)
 function loadLibrary() {
   library.innerHTML = "";
   movies.forEach((movie, index) => {
@@ -70,6 +71,35 @@ backBtn.onclick = () => {
   library.classList.remove("hidden");
 };
 
+// Função para alternar visibilidade dos cards
+function toggleCards() {
+  cardsVisible = !cardsVisible;
+  if (cardsVisible) {
+    library.style.display = "grid"; // mostra os cards
+    toggleBtn.textContent = "Esconder Quadros";
+  } else {
+    library.style.display = "none"; // esconde os cards
+    toggleBtn.textContent = "Mostrar Quadros";
+  }
+}
+
+// Criar botão para habilitar/desabilitar quadros
+const toggleBtn = document.createElement("button");
+toggleBtn.textContent = "Esconder Quadros";
+toggleBtn.style.margin = "10px auto";
+toggleBtn.style.display = "block";
+toggleBtn.style.padding = "10px 20px";
+toggleBtn.style.cursor = "pointer";
+toggleBtn.style.fontWeight = "700";
+toggleBtn.style.backgroundColor = "#00ff88";
+toggleBtn.style.border = "none";
+toggleBtn.style.borderRadius = "8px";
+toggleBtn.style.color = "#121212";
+toggleBtn.addEventListener("click", toggleCards);
+
+// Inserir botão antes da biblioteca
+library.parentNode.insertBefore(toggleBtn, library);
+
 // Verifica o caminho atual
 const path = window.location.pathname;
 // Remove barra final se existir (e o caminho tiver mais que 1 caractere)
@@ -88,8 +118,10 @@ if (showModal) {
   termsModal.style.display = "flex";
   library.classList.add("hidden");
   details.classList.add("hidden");
+  toggleBtn.style.display = "none"; // esconder botão junto com biblioteca
 } else {
   termsModal.style.display = "none";
+  toggleBtn.style.display = "block";
 }
 
 // Botão aceitar termos
@@ -97,6 +129,6 @@ acceptBtn.onclick = () => {
   termsModal.style.display = "none";
   library.classList.remove("hidden");
   details.classList.add("hidden");
+  toggleBtn.style.display = "block";
   loadLibrary();
 };
-
