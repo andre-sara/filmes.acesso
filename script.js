@@ -1,17 +1,15 @@
-// Lista de filmes com propriedade "enabled" para controlar visibilidade
+// Lista de filmes (exemplo)
 const movies = [
   {
     title: "Homem-Aranha",
     image: "https://upload.wikimedia.org/wikipedia/pt/0/0c/Spider-Man_poster.jpg",
-    enabled: true,  // habilitado
     episodes: [
       { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
     ],
   },
   {
-    title: "Instituto",
+    title: "Naruto",
     image: "https://upload.wikimedia.org/wikipedia/pt/7/7f/Naruto_Uzumaki.png",
-    enabled: false, // desabilitado
     episodes: [
       {
         name: "Temporada 1 - Episódio 1",
@@ -34,11 +32,10 @@ const backBtn = document.getElementById("backBtn");
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
-// Carregar biblioteca (exibe o menu) mostrando somente filmes habilitados
+// Carregar biblioteca (exibe o menu)
 function loadLibrary() {
   library.innerHTML = "";
   movies.forEach((movie, index) => {
-    if (!movie.enabled) return;  // Pula filmes desabilitados
     const card = document.createElement("div");
     card.classList.add("card");
     card.innerHTML = `
@@ -75,16 +72,18 @@ backBtn.onclick = () => {
 
 // Verifica o caminho atual
 const path = window.location.pathname;
+
 // Remove barra final se existir (e o caminho tiver mais que 1 caractere)
 const cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
-// Define caminhos raiz para mostrar modal
+
+// Caminhos que devem mostrar o modal
 const rootPaths = [
   "/filmes.acesso",
   "/filmes.acesso/index.html",
   "/"
 ];
 
-// Mostra modal se estiver em raiz
+// Verifica se o caminho está na lista (exata correspondência)
 const showModal = rootPaths.includes(cleanPath);
 
 if (showModal) {
