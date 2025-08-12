@@ -3,7 +3,7 @@ const movies = [
   {
     title: "O Instituto - Série 2025",
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
-    enabled: false, // desabilitado
+    enabled: false,
     seasons: [
       {
         seasonTitle: "Temporada Única",
@@ -15,47 +15,103 @@ const movies = [
   },
   {
     title: "Jovens Titãs",
-    image: "https://drive.google.com/uc?export=view&id=1hSsLNLn_pQHUfGK2Mu1QnLBgtf6eN_5D",
-    enabled: true,  // habilitado
+    image: "https://drive.google.com/file/d/1hSsLNLn_pQHUfGK2Mu1QnLBgtf6eN_5D/view?usp=drive_link",
+    enabled: true,
     seasons: [
       {
         seasonTitle: "Temporada 1",
-        episodes: Array.from({length: 13}, (_, i) => ({
-          name: `Episódio ${i + 1}`,
-          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T1_E${i + 1}`
-        })),
+        episodes: [
+          { name: "Episódio 1", link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link" },
+          { name: "Episódio 2", link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/view?usp=drive_link" },
+          { name: "Episódio 3", link: "https://drive.google.com/uc?export=download&id=ID_EP3_T1" },
+          { name: "Episódio 4", link: "https://drive.google.com/uc?export=download&id=ID_EP4_T1" },
+          { name: "Episódio 5", link: "https://drive.google.com/uc?export=download&id=ID_EP5_T1" },
+          { name: "Episódio 6", link: "https://drive.google.com/uc?export=download&id=ID_EP6_T1" },
+          { name: "Episódio 7", link: "https://drive.google.com/uc?export=download&id=ID_EP7_T1" },
+          { name: "Episódio 8", link: "https://drive.google.com/uc?export=download&id=ID_EP8_T1" },
+          { name: "Episódio 9", link: "https://drive.google.com/uc?export=download&id=ID_EP9_T1" },
+          { name: "Episódio 10", link: "https://drive.google.com/uc?export=download&id=ID_EP10_T1" },
+          { name: "Episódio 11", link: "https://drive.google.com/uc?export=download&id=ID_EP11_T1" },
+          { name: "Episódio 12", link: "https://drive.google.com/uc?export=download&id=ID_EP12_T1" },
+          { name: "Episódio 13", link: "https://drive.google.com/uc?export=download&id=ID_EP13_T1" },
+        ],
       },
       {
         seasonTitle: "Temporada 2",
-        episodes: Array.from({length: 13}, (_, i) => ({
-          name: `Episódio ${i + 1}`,
-          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T2_E${i + 1}`
-        })),
+        episodes: [
+          { name: "Episódio 1", link: "https://drive.google.com/uc?export=download&id=ID_EP1_T2" },
+          { name: "Episódio 2", link: "https://drive.google.com/uc?export=download&id=ID_EP2_T2" },
+          { name: "Episódio 3", link: "https://drive.google.com/uc?export=download&id=ID_EP3_T2" },
+          { name: "Episódio 4", link: "https://drive.google.com/uc?export=download&id=ID_EP4_T2" },
+          { name: "Episódio 5", link: "https://drive.google.com/uc?export=download&id=ID_EP5_T2" },
+          { name: "Episódio 6", link: "https://drive.google.com/uc?export=download&id=ID_EP6_T2" },
+          { name: "Episódio 7", link: "https://drive.google.com/uc?export=download&id=ID_EP7_T2" },
+          { name: "Episódio 8", link: "https://drive.google.com/uc?export=download&id=ID_EP8_T2" },
+          { name: "Episódio 9", link: "https://drive.google.com/uc?export=download&id=ID_EP9_T2" },
+          { name: "Episódio 10", link: "https://drive.google.com/uc?export=download&id=ID_EP10_T2" },
+          { name: "Episódio 11", link: "https://drive.google.com/uc?export=download&id=ID_EP11_T2" },
+          { name: "Episódio 12", link: "https://drive.google.com/uc?export=download&id=ID_EP12_T2" },
+          { name: "Episódio 13", link: "https://drive.google.com/uc?export=download&id=ID_EP13_T2" },
+        ],
       },
       {
         seasonTitle: "Temporada 3",
-        episodes: Array.from({length: 13}, (_, i) => ({
-          name: `Episódio ${i + 1}`,
-          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T3_E${i + 1}`
-        })),
+        episodes: [
+          { name: "Episódio 1", link: "https://drive.google.com/uc?export=download&id=ID_EP1_T3" },
+          { name: "Episódio 2", link: "https://drive.google.com/uc?export=download&id=ID_EP2_T3" },
+          { name: "Episódio 3", link: "https://drive.google.com/uc?export=download&id=ID_EP3_T3" },
+          { name: "Episódio 4", link: "https://drive.google.com/uc?export=download&id=ID_EP4_T3" },
+          { name: "Episódio 5", link: "https://drive.google.com/uc?export=download&id=ID_EP5_T3" },
+          { name: "Episódio 6", link: "https://drive.google.com/uc?export=download&id=ID_EP6_T3" },
+          { name: "Episódio 7", link: "https://drive.google.com/uc?export=download&id=ID_EP7_T3" },
+          { name: "Episódio 8", link: "https://drive.google.com/uc?export=download&id=ID_EP8_T3" },
+          { name: "Episódio 9", link: "https://drive.google.com/uc?export=download&id=ID_EP9_T3" },
+          { name: "Episódio 10", link: "https://drive.google.com/uc?export=download&id=ID_EP10_T3" },
+          { name: "Episódio 11", link: "https://drive.google.com/uc?export=download&id=ID_EP11_T3" },
+          { name: "Episódio 12", link: "https://drive.google.com/uc?export=download&id=ID_EP12_T3" },
+          { name: "Episódio 13", link: "https://drive.google.com/uc?export=download&id=ID_EP13_T3" },
+        ],
       },
       {
         seasonTitle: "Temporada 4",
-        episodes: Array.from({length: 13}, (_, i) => ({
-          name: `Episódio ${i + 1}`,
-          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T4_E${i + 1}`
-        })),
+        episodes: [
+          { name: "Episódio 1", link: "https://drive.google.com/uc?export=download&id=ID_EP1_T4" },
+          { name: "Episódio 2", link: "https://drive.google.com/uc?export=download&id=ID_EP2_T4" },
+          { name: "Episódio 3", link: "https://drive.google.com/uc?export=download&id=ID_EP3_T4" },
+          { name: "Episódio 4", link: "https://drive.google.com/uc?export=download&id=ID_EP4_T4" },
+          { name: "Episódio 5", link: "https://drive.google.com/uc?export=download&id=ID_EP5_T4" },
+          { name: "Episódio 6", link: "https://drive.google.com/uc?export=download&id=ID_EP6_T4" },
+          { name: "Episódio 7", link: "https://drive.google.com/uc?export=download&id=ID_EP7_T4" },
+          { name: "Episódio 8", link: "https://drive.google.com/uc?export=download&id=ID_EP8_T4" },
+          { name: "Episódio 9", link: "https://drive.google.com/uc?export=download&id=ID_EP9_T4" },
+          { name: "Episódio 10", link: "https://drive.google.com/uc?export=download&id=ID_EP10_T4" },
+          { name: "Episódio 11", link: "https://drive.google.com/uc?export=download&id=ID_EP11_T4" },
+          { name: "Episódio 12", link: "https://drive.google.com/uc?export=download&id=ID_EP12_T4" },
+          { name: "Episódio 13", link: "https://drive.google.com/uc?export=download&id=ID_EP13_T4" },
+        ],
       },
       {
         seasonTitle: "Temporada 5",
-        episodes: Array.from({length: 13}, (_, i) => ({
-          name: `Episódio ${i + 1}`,
-          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T5_E${i + 1}`
-        })),
+        episodes: [
+          { name: "Episódio 1", link: "https://drive.google.com/uc?export=download&id=ID_EP1_T5" },
+          { name: "Episódio 2", link: "https://drive.google.com/uc?export=download&id=ID_EP2_T5" },
+          { name: "Episódio 3", link: "https://drive.google.com/uc?export=download&id=ID_EP3_T5" },
+          { name: "Episódio 4", link: "https://drive.google.com/uc?export=download&id=ID_EP4_T5" },
+          { name: "Episódio 5", link: "https://drive.google.com/uc?export=download&id=ID_EP5_T5" },
+          { name: "Episódio 6", link: "https://drive.google.com/uc?export=download&id=ID_EP6_T5" },
+          { name: "Episódio 7", link: "https://drive.google.com/uc?export=download&id=ID_EP7_T5" },
+          { name: "Episódio 8", link: "https://drive.google.com/uc?export=download&id=ID_EP8_T5" },
+          { name: "Episódio 9", link: "https://drive.google.com/uc?export=download&id=ID_EP9_T5" },
+          { name: "Episódio 10", link: "https://drive.google.com/uc?export=download&id=ID_EP10_T5" },
+          { name: "Episódio 11", link: "https://drive.google.com/uc?export=download&id=ID_EP11_T5" },
+          { name: "Episódio 12", link: "https://drive.google.com/uc?export=download&id=ID_EP12_T5" },
+          { name: "Episódio 13", link: "https://drive.google.com/uc?export=download&id=ID_EP13_T5" },
+        ],
       },
     ],
   },
 ];
+
 
 const library = document.getElementById("library");
 const details = document.getElementById("details");
@@ -189,3 +245,4 @@ acceptBtn.onclick = () => {
   playerScreen.classList.add("hidden");
   loadLibrary();
 };
+
