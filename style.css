@@ -11,11 +11,11 @@ body {
 
 header {
   background: #00ff88;
-  padding: 2px 4px; /* altura menor */
+  padding: 2px 4px;
   text-align: center;
   color: #121212;
   font-weight: 700;
-  font-size: 1.4rem; /* fonte menor */
+  font-size: 1.4rem;
   user-select: none;
   box-shadow: 0 0 10px #00ff88aa;
 }
@@ -26,12 +26,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 18px;
   padding: 20px;
-  /* Removi flex-grow para não ocupar todo espaço disponível */
   overflow-y: auto;
-
-  height: 400px;      /* altura fixa */
-  max-width: 400px;   /* largura máxima para deixar quadrado */
-  margin-left: 20px; /* margem esquerda de 20px */
+  height: 400px;
+  max-width: 400px;
+  margin-left: 20px;
 }
 
 /* Cards menores e retangulares */
@@ -42,10 +40,10 @@ header {
   cursor: pointer;
   overflow: hidden;
   display: flex;
-  flex-direction: row; /* formato retangular horizontal */
+  flex-direction: row;
   user-select: none;
   transition: transform 0.25s ease;
-  height: 100px; /* altura menor */
+  height: 100px;
 }
 
 .card:hover {
@@ -53,7 +51,7 @@ header {
 }
 
 .card img {
-  width: 70px; /* largura menor */
+  width: 70px;
   height: 100%;
   object-fit: cover;
   border-top-left-radius: 14px;
@@ -71,13 +69,15 @@ header {
   flex-grow: 1;
 }
 
-/* Área detalhes episódios */
+/* Área detalhes temporadas e episódios */
 #details {
   padding: 20px;
   flex-grow: 1;
   background: #121212;
   color: #eee;
   overflow-y: auto;
+  max-width: 600px;
+  margin-left: 20px;
 }
 
 #backBtn {
@@ -105,10 +105,18 @@ header {
   color: #00ff88;
 }
 
-#episodesList {
+#seasonsList {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
+}
+
+.season h3 {
+  margin: 0 0 8px 0;
+  color: #00ff88;
+  border-bottom: 1px solid #00ff88;
+  padding-bottom: 4px;
+  font-weight: 700;
 }
 
 .episode a {
@@ -125,6 +133,51 @@ header {
 }
 .episode a:hover {
   background-color: #00cc6a;
+}
+
+/* Player embutido */
+#playerScreen {
+  padding: 20px;
+  background: #121212;
+  color: #eee;
+  max-width: 640px;
+  margin-left: 20px;
+  display: none;
+  flex-direction: column;
+}
+
+#playerBackBtn {
+  background-color: #00ff88;
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 20px;
+  user-select: none;
+  transition: background-color 0.3s;
+  align-self: flex-start;
+}
+#playerBackBtn:hover {
+  background-color: #00cc6a;
+}
+
+#playerTitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #00ff88;
+  text-align: center;
+}
+
+#videoContainer {
+  background: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff88;
+  display: flex;
+  justify-content: center;
 }
 
 /* Botão WhatsApp */
@@ -207,5 +260,3 @@ header {
 #acceptBtn:hover {
   background-color: #00cc6a;
 }
-
-
