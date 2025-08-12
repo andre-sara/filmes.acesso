@@ -1,21 +1,22 @@
 // Lista de filmes (exemplo) com propriedade "enabled" para controlar visibilidade
 const movies = [
   {
-    title: "Homem-Aranha",
-    image: "https://upload.wikimedia.org/wikipedia/pt/0/0c/Spider-Man_poster.jpg",
+    title: "O Instituto - Série 2025",
+    image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
     enabled: false, // desabilitado
     episodes: [
       { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
     ],
   },
   {
-    title: "Naruto",
-    image: "https://upload.wikimedia.org/wikipedia/pt/7/7f/Naruto_Uzumaki.png",
+    title: "Jovens Titãs",
+    image: "https://recreio.com.br/wp-content/uploads/2025/02/jovens-titas.jpg",
     enabled: true,  // habilitado
     episodes: [
       {
         name: "Temporada 1 - Episódio 1",
-        link: "https://drive.google.com/SEU-LINK",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+        link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/view?usp=sharing",
       },
       {
         name: "Temporada 1 - Episódio 2",
@@ -102,4 +103,5 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
