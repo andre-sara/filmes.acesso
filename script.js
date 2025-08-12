@@ -10,11 +10,11 @@ const movies = [
   },
   {
     title: "Jovens Titãs",
-    image: "https://recreio.com.br/wp-content/uploads/2025/02/jovens-titas.jpg",
+    image: "https://drive.google.com/file/d/1hSsLNLn_pQHUfGK2Mu1QnLBgtf6eN_5D/view?usp=drive_link",
     enabled: true,  // habilitado
     episodes: [
       {
-        name: "Temporada 1 - Episódio 1",
+        name: "Episódio 1",
         link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
       },
       {
@@ -102,6 +102,7 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
 
