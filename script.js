@@ -1,43 +1,62 @@
-// Dados dos filmes, com temporadas e episódios
+// Lista de filmes com estrutura de temporadas e episódios
 const movies = [
   {
     title: "O Instituto - Série 2025",
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
-    enabled: false,
+    enabled: false, // desabilitado
     seasons: [
       {
-        seasonTitle: "Filme Completo",
+        seasonTitle: "Temporada Única",
         episodes: [
-          { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
+          { name: "Filme Completo", link: "https://drive.google.com/uc?export=download&id=SEU-LINK" },
         ],
       },
     ],
   },
   {
     title: "Jovens Titãs",
-    image: "https://i.imgur.com/3GlAeaO.jpg", // substituí para uma imagem que funcione diretamente
-    enabled: true,
+    image: "https://drive.google.com/uc?export=view&id=1hSsLNLn_pQHUfGK2Mu1QnLBgtf6eN_5D",
+    enabled: true,  // habilitado
     seasons: [
       {
         seasonTitle: "Temporada 1",
-        episodes: [
-          { name: "Episódio 1", link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/preview" },
-          { name: "Episódio 2", link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/preview" },
-          // adicione os 13 episódios aqui, link formatado com /preview
-        ],
+        episodes: Array.from({length: 13}, (_, i) => ({
+          name: `Episódio ${i + 1}`,
+          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T1_E${i + 1}`
+        })),
       },
       {
         seasonTitle: "Temporada 2",
-        episodes: [
-          // preencha os episódios da temporada 2
-        ],
+        episodes: Array.from({length: 13}, (_, i) => ({
+          name: `Episódio ${i + 1}`,
+          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T2_E${i + 1}`
+        })),
       },
-      // até a temporada 5
+      {
+        seasonTitle: "Temporada 3",
+        episodes: Array.from({length: 13}, (_, i) => ({
+          name: `Episódio ${i + 1}`,
+          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T3_E${i + 1}`
+        })),
+      },
+      {
+        seasonTitle: "Temporada 4",
+        episodes: Array.from({length: 13}, (_, i) => ({
+          name: `Episódio ${i + 1}`,
+          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T4_E${i + 1}`
+        })),
+      },
+      {
+        seasonTitle: "Temporada 5",
+        episodes: Array.from({length: 13}, (_, i) => ({
+          name: `Episódio ${i + 1}`,
+          link: `https://drive.google.com/uc?export=download&id=SEU_LINK_T5_E${i + 1}`
+        })),
+      },
     ],
   },
 ];
 
-// Elementos DOM
 const library = document.getElementById("library");
 const details = document.getElementById("details");
 const movieTitle = document.getElementById("movieTitle");
@@ -52,7 +71,6 @@ const videoContainer = document.getElementById("videoContainer");
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
-// Função para carregar a biblioteca de filmes (mostrar cards)
 function loadLibrary() {
   library.innerHTML = "";
   movies.forEach((movie, index) => {
@@ -68,78 +86,86 @@ function loadLibrary() {
   });
 }
 
-// Mostrar detalhes do filme com temporadas e episódios
-function showDetails(movieIndex) {
+function showDetails(index) {
   library.classList.add("hidden");
-  playerScreen.classList.add("hidden");
   details.classList.remove("hidden");
+  playerScreen.classList.add("hidden");
 
-  const movie = movies[movieIndex];
+  const movie = movies[index];
   movieTitle.textContent = movie.title;
   seasonsList.innerHTML = "";
 
-  movie.seasons.forEach((season) => {
+  movie.seasons.forEach((season, sIndex) => {
     const seasonDiv = document.createElement("div");
     seasonDiv.classList.add("season");
-    const h3 = document.createElement("h3");
-    h3.textContent = season.seasonTitle;
-    seasonDiv.appendChild(h3);
 
-    season.episodes.forEach((ep) => {
+    // Temporada título
+    const seasonTitle = document.createElement("h3");
+    seasonTitle.textContent = season.seasonTitle;
+    seasonTitle.style.color = "#00ff88";
+    seasonTitle.style.marginBottom = "8px";
+    seasonDiv.appendChild(seasonTitle);
+
+    // Lista dos episódios
+    season.episodes.forEach((ep, eIndex) => {
       const epDiv = document.createElement("div");
       epDiv.classList.add("episode");
-      const a = document.createElement("a");
-      a.href = "#";
-      a.textContent = ep.name;
-      a.onclick = (e) => {
-        e.preventDefault();
-        openPlayer(ep.name, ep.link);
-      };
-      epDiv.appendChild(a);
+      epDiv.innerHTML = `<a href="#" data-movie="${index}" data-season="${sIndex}" data-episode="${eIndex}">${ep.name}</a>`;
       seasonDiv.appendChild(epDiv);
     });
 
     seasonsList.appendChild(seasonDiv);
   });
+
+  // Delegação para abrir player ao clicar no episódio
+  seasonsList.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const movieIndex = parseInt(link.dataset.movie);
+      const seasonIndex = parseInt(link.dataset.season);
+      const episodeIndex = parseInt(link.dataset.episode);
+      openPlayer(movieIndex, seasonIndex, episodeIndex);
+    });
+  });
 }
 
-// Abrir player embutido com vídeo dentro do site
-function openPlayer(title, videoLink) {
+backBtn.onclick = () => {
+  details.classList.add("hidden");
+  library.classList.remove("hidden");
+  playerScreen.classList.add("hidden");
+};
+
+playerBackBtn.onclick = () => {
+  playerScreen.classList.add("hidden");
+  details.classList.remove("hidden");
+  library.classList.add("hidden");
+};
+
+function openPlayer(movieIndex, seasonIndex, episodeIndex) {
+  const movie = movies[movieIndex];
+  const episode = movie.seasons[seasonIndex].episodes[episodeIndex];
+
   details.classList.add("hidden");
   library.classList.add("hidden");
   playerScreen.classList.remove("hidden");
 
-  playerTitle.textContent = title;
+  playerTitle.textContent = `${movie.title} - ${movie.seasons[seasonIndex].seasonTitle} - ${episode.name}`;
 
-  // Limpar conteúdo anterior
-  videoContainer.innerHTML = "";
-
-  // Criar iframe para vídeo
+  // Criar iframe player com estilo semelhante ao modal
   const iframe = document.createElement("iframe");
-  iframe.src = videoLink + "?autoplay=1&vq=hd720"; // tenta forçar 720p e autoplay
+  iframe.src = episode.link;
   iframe.width = "100%";
-  iframe.height = "360";
-  iframe.allow = "autoplay; encrypted-media; fullscreen";
+  iframe.height = "480";
+  iframe.allow = "autoplay; fullscreen; picture-in-picture";
   iframe.allowFullscreen = true;
   iframe.style.borderRadius = "10px";
   iframe.style.border = "none";
 
+  videoContainer.innerHTML = "";
   videoContainer.appendChild(iframe);
 }
 
-// Botão voltar do detalhe para a biblioteca
-backBtn.onclick = () => {
-  details.classList.add("hidden");
-  library.classList.remove("hidden");
-};
-
-// Botão voltar do player para detalhes
-playerBackBtn.onclick = () => {
-  playerScreen.classList.add("hidden");
-  details.classList.remove("hidden");
-};
-
-// Modal termos
+// Verifica o caminho atual para exibir modal de termos
 const path = window.location.pathname;
 const cleanPath = path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
 const rootPaths = ["/filmes.acesso", "/filmes.acesso/index.html", "/"];
@@ -147,17 +173,17 @@ const rootPaths = ["/filmes.acesso", "/filmes.acesso/index.html", "/"];
 const showModal = rootPaths.includes(cleanPath);
 
 if (showModal) {
-  termsModal.classList.remove("hidden");
+  termsModal.style.display = "flex";
   library.classList.add("hidden");
   details.classList.add("hidden");
   playerScreen.classList.add("hidden");
 } else {
-  termsModal.classList.add("hidden");
+  termsModal.style.display = "none";
+  loadLibrary();
 }
 
-// Botão aceitar termos
 acceptBtn.onclick = () => {
-  termsModal.classList.add("hidden");
+  termsModal.style.display = "none";
   library.classList.remove("hidden");
   details.classList.add("hidden");
   playerScreen.classList.add("hidden");
