@@ -16,11 +16,10 @@ const movies = [
       {
         name: "Temporada 1 - Episódio 1",
         link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
-        link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/view?usp=sharing",
       },
       {
-        name: "Temporada 1 - Episódio 2",
-        link: "https://drive.google.com/SEU-LINK",
+        name: "Episódio 2",
+        link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/view?usp=sharing",
       },
     ],
   },
@@ -103,5 +102,6 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
