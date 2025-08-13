@@ -279,6 +279,54 @@ header {
   background-color: #1ebd5a;
 }
 
+/* FAQ Toggle (botão de abrir) */
+.faq-toggle {
+  background: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* FAQ Section (oculta inicialmente) */
+.faq-section {
+  background: #f9f9f9;
+  border-top: 2px solid #ccc;
+  padding: 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+/* Quando visível */
+.faq-section.open {
+  max-height: 500px; /* ou maior se tiver muitas perguntas */
+}
+
+/* FAQ perguntas/respostas */
+.faq-item {
+  margin-bottom: 10px;
+}
+
+.faq-question {
+  width: 100%;
+  background: #e0e0e0;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding: 10px;
+  background: #fff;
+  border-left: 3px solid #888;
+}
+
+
 
 
 
