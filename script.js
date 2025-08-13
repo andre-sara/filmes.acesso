@@ -132,6 +132,20 @@ document.getElementById('whatsappBtn').addEventListener('click', function () {
   menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
 });
 
+// Fecha o menu WhatsApp se clicar fora dele ou do botão
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('whatsappMenu');
+  const button = document.getElementById('whatsappBtn');
+
+  // Se o menu está aberto...
+  if (menu.style.display === 'block') {
+    // E o clique NÃO foi no menu nem no botão...
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.style.display = 'none';  // Fecha o menu
+    }
+  }
+});
+
 // Enviar mensagem pronta para o WhatsApp
 function sendMessage(message) {
   const encoded = encodeURIComponent(message);
@@ -154,3 +168,4 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
