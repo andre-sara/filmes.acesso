@@ -15,10 +15,6 @@
   <h2>📽️ CineBox</h2>
 </header>
   
-<!-- Caixa fixa de orientações/lembranças -->
-<section id="notesBox">
-  <p><strong>Orientações:</strong> Caso necessite de ajuda, entre em contato conosco por meio do botão do WhatsApp localizado no canto inferior direito da página. Para reportar erros no site ou problemas na reprodução de filmes e séries, solicitamos que colete prints da tela e os envie para melhor análise. Informamos que disponibilizamos somente filmes e séries dublados em português do Brasil. Se desejar colaborar conosco, tornando-se um parceiro voluntário ou amigo do site, por favor, entre em contato pelo mesmo WhatsApp.</p>
-
 <!-- Modal de termos -->
 <div id="termsModal" class="modal">
   <div class="modal-content">
@@ -58,11 +54,30 @@
   <textarea id="customMessage" placeholder="Digite aqui..." oninput="autoGrow(this)"></textarea>
   <button class="send-button" onclick="sendCustomMessage()">✉️ Enviar</button>
 </div>
+
+  <!-- Botão para abrir o modal -->
+<button id="openModal" class="btn-info">ℹ️ Informações</button>
+
+<!-- Modal de orientações -->
+<div id="modalNotes" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2>Orientações Importantes</h2>
+    <ul>
+      <li>Para suporte, utilize o botão do WhatsApp no canto inferior direito.</li>
+      <li>Para reportar falhas no site ou reprodução, envie capturas de tela.</li>
+      <li>Todos os conteúdos são dublados em português do Brasil.</li>
+      <li>Deseja colaborar? Fale conosco via WhatsApp.</li>
+    </ul>
+    <button class="btn-accept">Li e Aceito</button>
+  </div>
+</div>
   
   <!-- importar os arquivos JS -->
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
