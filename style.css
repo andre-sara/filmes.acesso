@@ -149,6 +149,9 @@ header {
 #whatsappBtn:hover {
   background-color: #1ebe57;
 }
+.hidden-whatsapp {
+  display: none !important;
+}
 
 /* Esconder elementos com a classe hidden */
 .hidden {
@@ -275,6 +278,7 @@ header {
 .send-button:hover {
   background-color: #1ebd5a;
 }
+
 
 
 
