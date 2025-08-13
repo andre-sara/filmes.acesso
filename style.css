@@ -1,0 +1,211 @@
+/* Estilos gerais */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #121212;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: #00ff88;
+  padding: 2px 4px; /* altura menor */
+  text-align: center;
+  color: #121212;
+  font-weight: 700;
+  font-size: 1.4rem; /* fonte menor */
+  user-select: none;
+  box-shadow: 0 0 10px #00ff88aa;
+}
+
+/* Grid filmes */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  padding: 20px;
+  /* Removi flex-grow para não ocupar todo espaço disponível */
+  overflow-y: auto;
+
+  height: 400px;      /* altura fixa */
+  max-width: 400px;   /* largura máxima para deixar quadrado */
+  margin-left: 20px; /* margem esquerda de 20px */
+}
+
+/* Cards menores e retangulares */
+.card {
+  background-color: #222;
+  border-radius: 14px;
+  box-shadow: 0 0 5px #00ff88cc;
+  cursor: pointer;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row; /* formato retangular horizontal */
+  user-select: none;
+  transition: transform 0.25s ease;
+  height: 100px; /* altura menor */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 70px; /* largura menor */
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 14px;
+  border-bottom-left-radius: 14px;
+}
+
+.card-title {
+  color: #00ff88;
+  padding: 0 12px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+
+/* Área detalhes episódios */
+#details {
+  padding: 20px;
+  flex-grow: 1;
+  background: #121212;
+  color: #eee;
+  overflow-y: auto;
+}
+
+#backBtn {
+  background-color: #00ff88;
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-bottom: 20px;
+  user-select: none;
+  transition: background-color 0.3s;
+}
+#backBtn:hover {
+  background-color: #00cc6a;
+}
+
+#movieTitle {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #00ff88;
+}
+
+#episodesList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.episode a {
+  display: block;
+  background-color: #222;
+  padding: 12px 15px;
+  border-radius: 10px;
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 0 6px #00ff88cc;
+  transition: background-color 0.3s;
+  user-select: none;
+}
+.episode a:hover {
+  background-color: #00cc6a;
+}
+
+/* Botão WhatsApp */
+#whatsappBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: white;
+  font-size: 32px;
+  text-align: center;
+  line-height: 56px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px #25d366cc;
+  user-select: none;
+  transition: background-color 0.3s;
+  z-index: 10000;
+}
+#whatsappBtn:hover {
+  background-color: #1ebe57;
+}
+
+/* Esconder elementos com a classe hidden */
+.hidden {
+  display: none !important;
+}
+
+/* Modal geral */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background-color: #1f1f1f;
+  padding: 20px;
+  max-width: 600px;
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow-y: auto;
+  color: #fff;
+  box-shadow: 0 0 15px #00ff88;
+}
+
+.modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.modal-text p {
+  margin-bottom: 12px;
+  line-height: 1.4em;
+}
+
+#acceptBtn {
+  background-color: #00ff88;
+  border: none;
+  color: #121212;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#acceptBtn:hover {
+  background-color: #00cc6a;
+}
+
+
