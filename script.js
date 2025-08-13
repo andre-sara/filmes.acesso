@@ -42,6 +42,11 @@ const backBtn = document.getElementById("backBtn");
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
+const whatsappBtn = document.getElementById('whatsappBtn');  // Pegando botão WhatsApp
+
+// ESCONDE o botão WhatsApp ao carregar a página (antes de aceitar termos)
+whatsappBtn.style.display = 'none';
+
 // Carregar biblioteca (exibe o menu) mostrando somente filmes habilitados
 function loadLibrary() {
   library.innerHTML = "";
@@ -101,6 +106,9 @@ if (showModal) {
   details.classList.add("hidden");
 } else {
   termsModal.style.display = "none";
+  // Se não está no root (ou modal não aparece), já exibe a biblioteca e o WhatsApp
+  loadLibrary();
+  whatsappBtn.style.display = 'block';
 }
 
 // Botão aceitar termos
@@ -109,6 +117,9 @@ acceptBtn.onclick = () => {
   library.classList.remove("hidden");
   details.classList.add("hidden");
   loadLibrary();
+
+  // MOSTRA o botão WhatsApp APÓS aceitar termos
+  whatsappBtn.style.display = 'block';
 };
 
 // === Botão WhatsApp com menu interativo ===
