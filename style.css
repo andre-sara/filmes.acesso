@@ -105,29 +105,64 @@ header {
   color: #00ff88;
 }
 
-#episodesList {
+#seasonsList {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
-.episode a {
-  display: block;
+.season button {
   background-color: #222;
   padding: 12px 15px;
   border-radius: 10px;
   color: #00ff88;
-  text-decoration: none;
   font-weight: 600;
+  text-decoration: none;
   box-shadow: 0 0 6px #00ff88cc;
   transition: background-color 0.3s;
-  user-select: none;
 }
-.episode a:hover {
+
+.season button:hover {
   background-color: #00cc6a;
 }
 
-/* Botão WhatsApp */
+/* Janela do iframe (episódio) */
+#episodeWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 18, 18, 0.95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+}
+
+#iframeContainer {
+  background-color: #222;
+  padding: 20px;
+  max-width: 1000px;
+  max-height: 80vh;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#closeWindowBtn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #00ff88;
+  border: none;
+  color: #121212;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
 #whatsappBtn {
   position: fixed;
   bottom: 20px;
@@ -146,163 +181,11 @@ header {
   transition: background-color 0.3s;
   z-index: 10000;
 }
+
 #whatsappBtn:hover {
   background-color: #1ebe57;
 }
-.hidden-whatsapp {
-  display: none !important;
-}
 
-/* Esconder elementos com a classe hidden */
 .hidden {
   display: none !important;
 }
-
-/* Modal geral */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(18, 18, 18, 0.95);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;
-}
-
-.modal-content {
-  background-color: #1f1f1f;
-  padding: 20px;
-  max-width: 600px;
-  max-height: 80vh;
-  border-radius: 10px;
-  overflow-y: auto;
-  color: #fff;
-  box-shadow: 0 0 15px #00ff88;
-}
-
-.modal-content h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-}
-
-.modal-text p {
-  margin-bottom: 12px;
-  line-height: 1.4em;
-}
-
-#acceptBtn {
-  background-color: #00ff88;
-  border: none;
-  color: #121212;
-  padding: 12px 25px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 10px;
-  width: 100%;
-  font-size: 16px;
-  transition: background-color 0.3s;
-}
-
-#acceptBtn:hover {
-  background-color: #00cc6a;
-}
-
-/* === Estilos para o menu interativo do WhatsApp === */
-#whatsappMenu {
-  display: none;
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
-  background: #1e1e1e;
-  color: white;
-  border-radius: 10px;
-  padding: 15px;
-  width: 280px;
-  box-shadow: 0 4px 15px rgba(0, 255, 136); /* sombra verde clara */
-  z-index: 1000;
-  transition: all 0.3s ease;
-}
-
-#whatsappMenu p {
-  margin: 8px 0;
-  font-size: 15px;
-}
-
-#whatsappMenu button {
-  background-color: #25D366;
-  color: white;
-  border: none;
-  padding: 10px 12px;
-  margin-top: 8px;
-  border-radius: 6px;
-  width: 100%;
-  cursor: pointer;
-  font-size: 14px;
-  text-align: left;
-  transition: background-color 0.3s;
-}
-
-#whatsappMenu button:hover {
-  background-color: #1ebd5a;
-}
-
-#customMessage {
-  width: 100%;
-  min-height: 40px;
-  max-height: 150px;
-  padding: 8px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
-  resize: none;
-  box-sizing: border-box;
-}
-
-.send-button {
-  margin-top: 8px;
-  background-color: #25D366;
-  color: white;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.send-button:hover {
-  background-color: #1ebd5a;
-}
-
-/* Linha 7 do modal com cor diferente */
-.highlight-term {
-  color: #ff6666; /* vermelho claro */
-  font-weight: 700;
-  margin-bottom: 12px;
-}
-
-/* Caixa dentro do modal, com design igual ao modal-content */
-.highlight-box {
-  background-color: #1f1f1f;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #ff4d4d;
-  padding: 15px;
-  color: #eee;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  line-height: 1.4em;
-}
-
-
-
-
-
-
-
-
-
