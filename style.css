@@ -281,7 +281,7 @@ header {
 
 /* Linha 7 do modal com cor diferente */
 .highlight-term {
-  color: #00ff88; /* cor verde neon */
+  color: #ff6666; /* vermelho claro */
   font-weight: 700;
   margin-bottom: 12px;
 }
@@ -290,13 +290,14 @@ header {
 .highlight-box {
   background-color: #1f1f1f;
   border-radius: 10px;
-  box-shadow: 0 0 15px #00ff88;
+  box-shadow: 0 0 15px #ff4d4d;
   padding: 15px;
   color: #eee;
   margin-top: 10px;
   font-size: 0.9rem;
   line-height: 1.4em;
 }
+
 
 
 
