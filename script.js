@@ -169,5 +169,31 @@ function autoGrow(textarea) {
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
 
+// === MODAL DE ORIENTAÇÕES ===
+const modal = document.getElementById("modalNotes");
+const btn = document.getElementById("openModal");
+const span = document.querySelector(".close-modal");
+const acceptBtn = document.querySelector(".btn-accept");
+
+btn.onclick = function () {
+  modal.style.display = "flex";
+}
+
+span.onclick = function () {
+  modal.style.display = "none";
+}
+
+acceptBtn.onclick = function () {
+  modal.style.display = "none";
+}
+
+window.onclick = function (event) {
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
 
 
