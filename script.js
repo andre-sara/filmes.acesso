@@ -65,6 +65,214 @@ const movies = [
         name: "Episódio 13 - O Carro",
         link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
       },
+            {
+        name: "Episódio 14 - Quanto Tempo É Para Sempre",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 15 - Todo Cão Tem Seu Dia",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 16 - Terra",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 17 - Apenas Humano",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 18 - Medo Em Si",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 19 - Encontro Com O Destino",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 20 - Transformação",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 21 - A Nova Titã",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 22 - O Vencedor Leva Tudo",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 23 - Traição",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 24 - Fraturado",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 25 - Após O Tremor Parte 1",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 26 - Após O Tremor Parte 2",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 27 - Farsa",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 28 - X",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 29 - O Prometido",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 30 - Pane",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 31 - Assombração",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 32 - Enfeitiçado",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 33 - Revolução",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 34 - Ondas",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 35 - A Fera Interior",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 36 - Posso Ficar Com Ele",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 37 - A Coelha Ravena Ou Como Fazer Um Titanimal Desaparecer",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 38 - Titãs Da Costa Leste Parte 1",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 39 - Titãs Da Costa Leste Parte 2",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 40 - Não Mude De Canal",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 41 - A Busca",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 42 - Marca De Nascença",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 43 - Cyborg O Bárbaro",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 44 - Funcionário Do Mês",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 45 - Troq",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 46 - A Profecia",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 47 - Encrencados",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 48 - A Todo Vapor",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 49 - Mamãe Posso Ir",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 50 - O Fim Parte 1",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 51 - O Fim Parte 2",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 52 - O Fim Parte 3",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 53 - A Volta Para Casa Parte 1",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 54 - A Volta Para Casa Parte 2",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 55 - Confiança",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 56 - De Verdade",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 57 - Neve",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 58 - Kole",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 59 - Esconde-Esconde",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 60 - Velocidade Da Luz",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 61 - Acelerado",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+            {
+        name: "Episódio 62 - Atacar",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 63 - Chamando Todos Os Titãs",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 64 - Titãs Juntos",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },   
+            {
+        name: "Episódio 65 - As Coisas Mudam",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
     ],
   },
 ];
@@ -146,7 +354,3 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
-
-
-
-
