@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>📽️CineBox</title>
+  <!-- importar os arquivos CSS -->
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -43,100 +44,23 @@
   <div id="episodesList"></div>
 </section>
 
-<!-- CSS básico para posicionar -->
-<style>
-  #whatsappBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    border-radius: 50%;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 60px;
-    cursor: pointer;
-    z-index: 1000;
-  }
+  <!-- Dentro do <body> -->
+<div id="whatsappBtn" title="Fale conosco via WhatsApp">💬</div>
 
-  #whatsappMenu {
-    display: none;
-    position: fixed;
-    bottom: 90px;
-    right: 20px;
-    background: white;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 15px;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 1000;
-  }
-
-  #whatsappMenu button {
-    background-color: #25D366;
-    color: white;
-    border: none;
-    padding: 8px 10px;
-    margin-top: 5px;
-    border-radius: 5px;
-    width: 100%;
-    cursor: pointer;
-  }
-
-  #whatsappMenu input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-</style>
-
-<!-- Botão Whatsapp Flutuante -->
-<div id="whatsappBtn">💬</div>
-
-<!-- Menu com opções -->
 <div id="whatsappMenu">
   <p>Escolha uma opção:</p>
-  <button onclick="sendMessage('Olá, acessei seu acervo de filmes no site!')">📽️ Olá, acessei seu acervo de filmes no site!</button>
-  <button onclick="sendMessage('Como adicionar filmes, séries ou desenhos no site?')">➕ Como adicionar filmes ou séries?</button>
+  <button onclick="sendMessage('Olá, acessei seu acervo de filmes no site!')">🎬 Olá, acessei seu acervo de filmes no site!</button>
+  <button onclick="sendMessage('Como adicionar filmes, séries ou desenhos no site?')">❓ Como adicionar filmes, séries ou desenhos?</button>
 
   <p>Ou escreva sua dúvida:</p>
-  <input type="text" id="customMessage" placeholder="Digite aqui..." />
-  <button onclick="sendCustomMessage()">✉️ Enviar</button>
+  <textarea id="customMessage" placeholder="Digite aqui..." oninput="autoGrow(this)"></textarea>
+  <button class="send-button" onclick="sendCustomMessage()">✉️ Enviar</button>
 </div>
-
-<!-- JavaScript -->
-<script>
-  const phoneNumber = '244956669394'; // Substitua pelo seu número
-
-  document.getElementById('whatsappBtn').addEventListener('click', function () {
-    const menu = document.getElementById('whatsappMenu');
-    menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
-  });
-
-  function sendMessage(message) {
-    const encoded = encodeURIComponent(message);
-    const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
-    window.open(url, '_blank');
-  }
-
-  function sendCustomMessage() {
-    const input = document.getElementById('customMessage').value;
-    if (input.trim() !== '') {
-      sendMessage(input);
-    } else {
-      alert('Por favor, digite uma mensagem.');
-    }
-  }
-</script>
-
+  <!-- importar os arquivos JS -->
 <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
