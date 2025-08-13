@@ -279,6 +279,25 @@ header {
   background-color: #1ebd5a;
 }
 
+/* Linha 7 do modal com cor diferente */
+.highlight-term {
+  color: #00ff88; /* cor verde neon */
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+/* Caixa dentro do modal, com design igual ao modal-content */
+.highlight-box {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #00ff88;
+  padding: 15px;
+  color: #eee;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  line-height: 1.4em;
+}
+
 
 
 
