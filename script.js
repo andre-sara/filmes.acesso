@@ -21,6 +21,14 @@ const movies = [
         name: "Episódio 2",
         link: "https://drive.google.com/file/d/1C8Z7Sz5JUBAcwBHQ5bciAuyFjM9LZk4C/view?usp=sharing",
       },
+      {
+        name: "Episódio 3",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
+      {
+        name: "Episódio 4",
+        link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
+      },
     ],
   },
 ];
@@ -102,6 +110,7 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
 
