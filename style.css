@@ -169,14 +169,14 @@ header {
 }
 
 .modal-content {
-  background-color: #88881f1f1f;
+  background-color: #1f1f1f;
   padding: 20px;
   max-width: 600px;
   max-height: 80vh;
   border-radius: 10px;
   overflow-y: auto;
   color: #fff;
-  box-shadow: 0 0 15px #00ff88;
+  box-shadow: 0 0 15px #111111111111111111100ff88;
 }
 
 .modal-content h2 {
@@ -206,6 +206,7 @@ header {
 #acceptBtn:hover {
   background-color: #00cc6a;
 }
+
 
 
 
