@@ -111,11 +111,35 @@ acceptBtn.onclick = () => {
   loadLibrary();
 };
 
+// === Botão WhatsApp com menu interativo ===
 
+const phoneNumber = '244956669394'; // seu número
 
+// Mostrar/ocultar menu WhatsApp ao clicar no botão
+document.getElementById('whatsappBtn').addEventListener('click', function () {
+  const menu = document.getElementById('whatsappMenu');
+  menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+});
 
+// Enviar mensagem pronta para o WhatsApp
+function sendMessage(message) {
+  const encoded = encodeURIComponent(message);
+  const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
+  window.open(url, '_blank');
+}
 
+// Enviar mensagem personalizada digitada pelo usuário
+function sendCustomMessage() {
+  const input = document.getElementById('customMessage').value;
+  if (input.trim() !== '') {
+    sendMessage(input);
+  } else {
+    alert('Por favor, digite uma mensagem.');
+  }
+}
 
-
-
-
+// Auto-ajuste da altura da caixa de texto
+function autoGrow(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = (textarea.scrollHeight) + "px";
+}
