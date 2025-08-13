@@ -169,3 +169,20 @@ function autoGrow(textarea) {
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
 
+// Toggle geral do FAQ
+const faqToggle = document.getElementById('faqToggle');
+const faqSection = document.getElementById('faqSection');
+
+faqToggle.addEventListener('click', () => {
+  faqSection.classList.toggle('open');
+});
+
+// Mostrar/ocultar resposta de cada pergunta
+document.querySelectorAll('.faq-question').forEach(button => {
+  button.addEventListener('click', () => {
+    const answer = button.nextElementSibling;
+    answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+  });
+});
+
+
