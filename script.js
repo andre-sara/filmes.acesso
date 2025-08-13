@@ -3,14 +3,14 @@ const movies = [
   {
     title: "O Instituto - Série 2025",
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
-    enabled: false, // desabilitado
+    enabled: true, // desabilitado
     episodes: [
       { name: "Filme Completo", link: "https://drive.google.com/SEU-LINK" },
     ],
   },
   {
     title: "Jovens Titãs",
-    image: "https://drive.google.com/file/d/1hSsLNLn_pQHUfGK2Mu1QnLBgtf6eN_5D/view?usp=drive_link",
+    image: "https://upload.wikimedia.org/wikipedia/pt/9/9e/TeenTitansLogo.JPG",
     enabled: true,  // habilitado
     episodes: [
       {
@@ -102,6 +102,7 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
 
