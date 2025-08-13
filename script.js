@@ -5,7 +5,7 @@ const movies = [
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
     enabled: true, // desabilitado = false
     episodes: [
-      { name: "EM BREVE ESTARÁ DISPONÍVEL!", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "EM BREVE ESTARÁ DISPONÍVEL", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
     ],
   },
   {
@@ -358,6 +358,7 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
 
