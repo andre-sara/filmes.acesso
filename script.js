@@ -29,8 +29,10 @@ const movies = [
         name: "Episódio 4",
         link: "https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/view?usp=drive_link",
       },
+      {
         name: "Episódio 5",
       <iframe src="https://drive.google.com/file/d/1XfSY3phJdJWiI4wcaXqxENxdeogc5rs-/preview" width="640" height="480" allow="autoplay"></iframe>
+      },
     ],
   },
 ];
@@ -112,6 +114,7 @@ acceptBtn.onclick = () => {
   details.classList.add("hidden");
   loadLibrary();
 };
+
 
 
 
