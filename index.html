@@ -1,38 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Biblioteca de Filmes</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Estilo para a mensagem de ATENÇÃO */
-    .alert {
-      background-color: #ffcc00; /* Amarelo */
-      color: #121212;  /* Texto escuro */
-      padding: 10px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      text-align: center;
-      border-radius: 8px;
-      margin: 10px 0;
-    }
-    .alert strong {
-      color: red;  /* Cor vermelha para "ATENÇÃO" */
-    }
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CineBox</title>
+<link rel="icon" href="https://raw.githubusercontent.com/andre-sara/filmes.acesso/main/favicon.png" type="image/png" />
+
+  <!-- importar os arquivos CSS -->
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <header>
-  <h2>Biblioteca de Filmes</h2>
+  <h2>📽️ CineBox</h2>
 </header>
-
-<!-- Mensagem de ATENÇÃO -->
-<div class="alert">
-  <strong>ATENÇÃO:</strong> Este site é apenas para exibição de filmes e séries dublados em português do Brasil. Não disponibilizamos conteúdo para download. NOSSO SITE É NOVO CRIADO EM 07/08/2025, PORTANTO TENHA CALMA E PACIÊNCIA CASO HAJA FALHAS CRÍTICAS, ESTAMOS TRABALHANDO PARA UMA FUTURA ATUALIZAÇÃO SEVERA COM MELHORIAS DE INSTABILIDADE E CORREÇÕES GERAIS. CASO ALGO NÃO FUNCIONE CORRETAMENTE SOLICITAMOS QUE ENTRE EM CONTATO CONOSCO PELO FORMULÁRIO ABAIXO DE WHATSAPP DA EQUIPE, UMA ATUALIZAÇÃO PODERÁ DEMORAR PARA SAIR, NÃO POSSUO AJUDANTE QUE ME AJUDE ESTOU TRABALHANDO SOZINHO SE ALGUÉM QUISER VOLUNTARIAMENTE AJUDAR QUE SEJA PROGRAMADOR ENVIE PELO BOTÃO DE WHATSAPP NO SITE UMA MENSAGEM.
-</div>
-
+  
 <!-- Modal de termos -->
 <div id="termsModal" class="modal">
   <div class="modal-content">
@@ -44,7 +26,11 @@
       <p><strong>4. Disponibilidade:</strong> Site criado em 07/08/2025, novos conteúdos serão adicionados mediante pedidos. Colaborações são bem-vindas.</p>
       <p><strong>5. Idioma e Segurança:</strong> Conteúdos dublados em Português do Brasil, sem opção de download para segurança contra vírus.</p>
       <p><strong>6. Uso Indevido:</strong> Uso ilegal ou prejudicial é proibido. Reservamo-nos o direito de remover conteúdos sem aviso.</p>
-      <p><strong>7. SUGESTÃO DE QUALIDADE:</strong> Quando abrir o vídeo altere a resolução de automática ou de 360p para 720P HD O player vem com a resolução baixa por padrão.</p>
+      <p class="highlight-term">
+  <strong>7. Orientações Lembretes:</strong> </p>
+<div class="highlight-box">
+  Caso necessite de assistência, solicitamos que entre em contato conosco por meio do botão do WhatsApp, localizado no canto inferior direito desta página. Para reportar eventuais erros no site ou dificuldades na reprodução de filmes e séries, pedimos a gentileza de capturar imagens da tela (prints) e enviá-las para uma análise mais detalhada. Informamos que disponibilizamos exclusivamente filmes e séries dublados em português do Brasil.<br>Se tiver interesse em colaborar conosco, tornando-se um parceiro voluntário ou amigo do site, por favor, utilize o mesmo canal via WhatsApp para manifestar seu interesse.
+</div>
       <p>Ao prosseguir, você concorda com todos os termos acima.</p>
     </div>
     <button id="acceptBtn">Li e Aceito</button>
@@ -61,13 +47,20 @@
   <div id="episodesList"></div>
 </section>
 
-<!-- Botão WhatsApp -->
-<a id="whatsappBtn" href="https://wa.me/27434956266973914?text=Ol%C3%A1%2C%20acessei%20sua%20biblioteca%20de%20filmes%20no%20site%21" target="_blank">
-💬
-</a>
+  <!-- Dentro do <body> -->
+<button id="whatsappBtn" title="Fale conosco via WhatsApp">💬</button>
 
+<div id="whatsappMenu">
+  <p>Escolha uma opção:</p>
+  <button onclick="sendMessage('Olá, acessei seu acervo de filmes no site!')">🎬 Olá, acessei seu acervo de filmes no site!</button>
+  <button onclick="sendMessage('Como adicionar filmes, séries ou desenhos no site?')">❓ Como adicionar filmes, séries ou desenhos?</button>
+
+  <p>Ou escreva sua dúvida:</p>
+  <textarea id="customMessage" placeholder="Digite aqui..." oninput="autoGrow(this)"></textarea>
+  <button class="send-button" onclick="sendCustomMessage()">✉️ Enviar</button>
+</div>
+  
+  <!-- importar os arquivos JS -->
 <script src="script.js"></script>
 </body>
 </html>
-
-
