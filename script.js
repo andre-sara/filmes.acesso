@@ -290,6 +290,11 @@ const backBtn = document.getElementById("backBtn");
 const termsModal = document.getElementById("termsModal");
 const acceptBtn = document.getElementById("acceptBtn");
 
+const whatsappBtn = document.getElementById('whatsappBtn');  // Pegando botão WhatsApp
+
+// ESCONDE o botão WhatsApp ao carregar a página (antes de aceitar termos)
+whatsappBtn.style.display = 'none';
+
 // Carregar biblioteca (exibe o menu) mostrando somente filmes habilitados
 function loadLibrary() {
   library.innerHTML = "";
@@ -349,6 +354,9 @@ if (showModal) {
   details.classList.add("hidden");
 } else {
   termsModal.style.display = "none";
+  // Se não está no root (ou modal não aparece), já exibe a biblioteca e o WhatsApp
+  loadLibrary();
+  whatsappBtn.style.display = 'block';
 }
 
 // Botão aceitar termos
@@ -357,8 +365,54 @@ acceptBtn.onclick = () => {
   library.classList.remove("hidden");
   details.classList.add("hidden");
   loadLibrary();
+
+  // MOSTRA o botão WhatsApp APÓS aceitar termos
+  whatsappBtn.style.display = 'block';
 };
 
+// === Botão WhatsApp com menu interativo ===
 
+const phoneNumber = '244956669394'; // seu número
 
+// Mostrar/ocultar menu WhatsApp ao clicar no botão
+document.getElementById('whatsappBtn').addEventListener('click', function () {
+  const menu = document.getElementById('whatsappMenu');
+  menu.style.display = (menu.style.display === 'none' || menu.style.display === '') ? 'block' : 'none';
+});
 
+// Fecha o menu WhatsApp se clicar fora dele ou do botão
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById('whatsappMenu');
+  const button = document.getElementById('whatsappBtn');
+
+  // Se o menu está aberto...
+  if (menu.style.display === 'block') {
+    // E o clique NÃO foi no menu nem no botão...
+    if (!menu.contains(event.target) && !button.contains(event.target)) {
+      menu.style.display = 'none';  // Fecha o menu
+    }
+  }
+});
+
+// Enviar mensagem pronta para o WhatsApp
+function sendMessage(message) {
+  const encoded = encodeURIComponent(message);
+  const url = `https://wa.me/${phoneNumber}?text=${encoded}`;
+  window.open(url, '_blank');
+}
+
+// Enviar mensagem personalizada digitada pelo usuário
+function sendCustomMessage() {
+  const input = document.getElementById('customMessage').value;
+  if (input.trim() !== '') {
+    sendMessage(input);
+  } else {
+    alert('Por favor, digite uma mensagem.');
+  }
+}
+
+// Auto-ajuste da altura da caixa de texto
+function autoGrow(textarea) {
+  textarea.style.height = 'auto';
+  textarea.style.height = (textarea.scrollHeight) + "px";
+}
