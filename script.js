@@ -5,7 +5,14 @@ const movies = [
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
     enabled: true, // desabilitado = false
     episodes: [
-      { name: "EM BREVE ESTARÁ DISPONÍVEL", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "Episódio 1", link: "https://drive.google.com/file/d/1LsIM8ChewdHO5xlh8zdUkewTw2UP54zK/view?usp=drive_link" },
+      { name: "Episódio 2", link: "https://drive.google.com/file/d/1S47ojugTPcxBrfKwH1QoTByu55cwULjO/view?usp=drive_link" },
+      { name: "Episódio 3", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "Episódio 4", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "Episódio 5", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "Episódio 6", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "O Episódio 7 estará disponível somente em 18/08/2025.", link: "https://drive.google.com/naoexistelogovaiserindexado" },
+      { name: "O Episódio 8, último episódio da série, estará disponível somente em 25/08/2025.", link: "https://drive.google.com/naoexistelogovaiserindexado" },
     ],
   },
   {
@@ -416,5 +423,6 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
 
