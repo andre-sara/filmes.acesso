@@ -9,8 +9,8 @@ const movies = [
       { name: "Episódio 2", link: "https://drive.google.com/file/d/1S47ojugTPcxBrfKwH1QoTByu55cwULjO/view?usp=drive_link" },
       { name: "Episódio 3", link: "https://drive.google.com/file/d/1Pu1L6DHxSwtv64kXakBnhAjVcY5CwRPS/view?usp=drive_link" },
       { name: "Episódio 4", link: "https://drive.google.com/file/d/1gHyoQwSs4N1Uvp8dUKXf0yYVX2VH7llC/view?usp=drive_link" },
-      { name: "Episódio 5", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
-      { name: "Episódio 6", link: "https://drive.google.com/SEU-LINKlogovaiserindexado" },
+      { name: "Episódio 5", link: "https://drive.google.com/file/d/1-pgLx1L6TB6PhboeVkmxnqQ9wbzazeHg/view?usp=drive_link" },
+      { name: "Episódio 6", link: "https://drive.google.com/file/d/1trpZNZy6wMN6OXERXhCBRWLJE-2ZgMVo/view?usp=drive_link" },
       { name: "O Episódio 7 estará disponível somente em 18/08/2025.", link: "https://drive.google.com/naoexistelogovaiserindexado" },
       { name: "O Episódio 8 último episódio da série, estará disponível somente em 25/08/2025.", link: "https://drive.google.com/naoexistelogovaiserindexado" },
     ],
@@ -423,6 +423,7 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
 
 
