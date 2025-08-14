@@ -10,7 +10,7 @@ const movies = [
   },
   {
     title: "Jovens Titãs",
-    image: "https://static.wikia.nocookie.net/dublagem/images/e/e0/Teen_Titans.jpeg/revision/latest?cb=20220313221145&path-prefix=pt-br",
+    image: "https://upload.wikimedia.org/wikipedia/pt/9/9e/TeenTitansLogo.JPG",
     enabled: true,  // habilitado
     episodes: [
       {
@@ -416,4 +416,5 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
