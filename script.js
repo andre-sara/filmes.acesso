@@ -1,5 +1,13 @@
 // Lista de filmes (exemplo) com propriedade "enabled" para controlar visibilidade
 const movies = [
+   {
+    title: "Superman 2025",
+    image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgxfqC60z1VjcC151bjgVNl9RhH9Tg6N8jDMkqQN0zsMCwLbV",
+    enabled: true, // desabilitado = false
+    episodes: [
+      { name: "Filme Completo", link: "https://drive.google.com/file/d/1LsIM8ChewdHO5xlh8zdUkewTw2UP54zK/view?usp=drive_link" },
+    ],
+  },
   {
     title: "O Instituto - Série 2025",
     image: "https://cinepop.com.br/wp-content/uploads/2025/07/o-instituto-scaled.webp",
@@ -423,6 +431,7 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
 
 
