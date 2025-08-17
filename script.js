@@ -5,7 +5,7 @@ const movies = [
     image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgxfqC60z1VjcC151bjgVNl9RhH9Tg6N8jDMkqQN0zsMCwLbV",
     enabled: true, // desabilitado = false
     episodes: [
-      { name: "Filme Completo", link: "https://drive.google.com/file/d/1LsIM8ChewdHO5xlh8zdUkewTw2UP54zK/view?usp=drive_link" },
+      { name: "Filme Completo", link: "https://drive.google.com/file/d/1rfll5a3pDrWJfHNbkRm4Ar9wt-qVxPx5/view?usp=drive_link" },
     ],
   },
   {
@@ -431,6 +431,7 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
 
 
