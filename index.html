@@ -1,63 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cinebox</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CineBox</title>
+<link rel="icon" href="https://raw.githubusercontent.com/andre-sara/filmes.acesso/main/favicon.png" type="image/png" />
+
+  <!-- importar os arquivos CSS -->
+<link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>Cinebox</header>
 
-  <!-- Biblioteca -->
-  <section id="library" class="grid-container hidden"></section>
-
-  <!-- Detalhes do filme/episódios -->
-  <section id="details" class="hidden">
-    <button id="backBtn">⬅ Voltar</button>
-    <h2 id="movieTitle"></h2>
-    <div id="episodesList"></div>
-  </section>
-
-  <!-- Player de vídeo -->
-  <section id="playerSection" class="hidden">
-    <button id="closePlayerBtn">⬅ Voltar aos Episódios</button>
-    <div class="video-container">
-      <iframe id="videoFrame" src="" allowfullscreen allow="autoplay"></iframe>
+<header>
+  <h2>CineBox</h2>
+</header>
+  
+<!-- Modal de termos -->
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <h2>Política de Uso e Termos de Responsabilidade</h2>
+    <div class="modal-text">
+      <p><strong>1. Conteúdo:</strong> Todos os filmes, séries e desenhos disponíveis neste site não são de nossa autoria ou propriedade. Apenas indexamos links de fontes públicas.</p>
+      <p><strong>2. Direitos Autorais e Responsabilidade:</strong> Não somos responsáveis por mau uso, falhas técnicas ou conteúdos de terceiros. Nosso site não exibe anúncios próprios.</p>
+      <p><strong>3. Problemas Técnicos:</strong> Caso encontre falhas, entre em contato via WhatsApp com prints para análise.</p>
+      <p><strong>4. Disponibilidade:</strong> Site criado em 07/08/2025, novos conteúdos serão adicionados mediante pedidos. Colaborações são bem-vindas.</p>
+      <p><strong>5. Idioma e Segurança:</strong> Conteúdos dublados em Português do Brasil, sem opção de download para segurança contra vírus.</p>
+      <p><strong>6. Uso Indevido:</strong> Uso ilegal ou prejudicial é proibido. Reservamo-nos o direito de remover conteúdos sem aviso.</p>
+      <p class="highlight-term">
+  <strong>7. Orientações Lembretes:</strong> </p>
+<div class="highlight-box">
+  Caso necessite de assistência, solicitamos que entre em contato conosco por meio do botão do WhatsApp, localizado no canto inferior direito desta página. Para reportar eventuais erros no site ou dificuldades na reprodução de filmes e séries, pedimos a gentileza de capturar imagens da tela (prints) e enviá-las para uma análise mais detalhada. Informamos que disponibilizamos exclusivamente filmes e séries dublados em português do Brasil.<br>Se tiver interesse em colaborar conosco, tornando-se um parceiro voluntário ou amigo do site, por favor, utilize o mesmo canal via WhatsApp para manifestar seu interesse.
+</div>
+      <p>Ao prosseguir, você concorda com todos os termos acima.</p>
     </div>
-  </section>
-
-  <!-- Botão WhatsApp -->
-  <a href="#" id="whatsappBtn">💬</a>
-
-  <!-- Menu interativo WhatsApp -->
-  <div id="whatsappMenu">
-    <p>Fale conosco no WhatsApp!</p>
-    <button onclick="sendMessage('Olá, gostaria de ajuda!')">Mensagem Rápida</button>
-    <textarea id="customMessage" placeholder="Digite sua mensagem..." oninput="autoGrow(this)"></textarea>
-    <button class="send-button" onclick="sendCustomMessage()">Enviar</button>
+    <button id="acceptBtn">Li e Aceito</button>
   </div>
+</div>
 
-  <!-- Modal de termos -->
-  <div id="termsModal" class="modal">
-    <div class="modal-content">
-      <h2>Termos de Uso</h2>
-      <div class="modal-text">
-        <p>1. Este site tem caráter educacional.</p>
-        <p>2. O conteúdo não é hospedado aqui.</p>
-        <p>3. Links são de terceiros.</p>
-        <p>4. Não nos responsabilizamos por uso inadequado.</p>
-        <p>5. Recomendamos uso consciente.</p>
-        <p>6. O acesso implica aceite dos termos.</p>
-        <p class="highlight-term">7. Conteúdo protegido por direitos autorais.</p>
-      </div>
-      <div class="highlight-box">
-        <p>Todo conteúdo exibido é de responsabilidade das plataformas externas. Ao prosseguir, você confirma estar ciente disso.</p>
-      </div>
-      <button id="acceptBtn">Aceitar e Continuar</button>
-    </div>
+<!-- Área dos filmes -->
+<main id="library" class="grid-container hidden"></main>
+
+<!-- Área de temporadas/episódios -->
+<section id="details" class="hidden">
+  <button id="backBtn">⬅ Voltar</button>
+  <h2 id="movieTitle"></h2>
+  <div id="episodesList"></div>
+</section>
+
+<!-- === Player interno (overlay) - ADIÇÃO: abre vídeo dentro do site === -->
+<section id="playerSection" class="hidden">
+  <button id="closePlayerBtn">⬅ Voltar</button>
+  <div class="video-container">
+    <iframe id="playerFrame" src="" allowfullscreen allow="autoplay"></iframe>
   </div>
+</section>
+<!-- === FIM Player interno === -->
 
-  <script src="script.js"></script>
+  <!-- Dentro do <body> -->
+<button id="whatsappBtn" title="Fale conosco via WhatsApp">💬</button>
+
+<div id="whatsappMenu">
+  <p>Escolha uma opção:</p>
+  <button onclick="sendMessage('Quais são os passos necessários para adicionar filmes, séries ou desenhos ao site? Existe um processo específico para cada tipo de conteúdo, e como os responsáveis pela atualização garantem que tudo esteja corretamente indexado?')">🎬 Como posso adicionar filmes, séries ou desenhos ao site?</button>
+  <button onclick="sendMessage('Como posso ajudar no desenvolvimento e aprimoramento do site, especialmente em relação à programação lógica? Existem áreas específicas onde posso contribuir, como no código, nas funcionalidades ou em melhorias gerais? Posso ajudar com sugestões de melhorias ou até mesmo no teste de novos recursos?')">Como posso contribuir para ajudar no desenvolvimento do site, seja com programação ou outras sugestões?</button>
+  <button onclick="sendMessage('Por que o processo de adicionar filmes ao site demora tanto? Quantas pessoas estão envolvidas na indexação e atualização do conteúdo? Existem etapas específicas que fazem esse trabalho ser mais demorado?')">Por que demora para ser adicionado filmes ao site?</button>
+  <button onclick="sendMessage('Encontrei um erro no site e estou enfrentando dificuldades na reprodução de um conteúdo; estarei enviando os prints da tela, conforme orientado na Política de Uso e Termos de Responsabilidade do site, a qual li, aceitei e concordei, a fim de facilitar a análise do problema.')">Quero informar um erro no site ou uma falha na reprodução de conteúdo.</button>
+  <p>Ou escreva sua dúvida:</p>
+  <textarea id="customMessage" placeholder="Digite aqui..." oninput="autoGrow(this)"></textarea>
+  <button class="send-button" onclick="sendCustomMessage()">✉️ Enviar</button>
+</div>
+  
+  <!-- importar os arquivos JS -->
+<script src="script.js"></script>
 </body>
 </html>
