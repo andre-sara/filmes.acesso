@@ -26,12 +26,10 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 18px;
   padding: 20px;
-  /* Removi flex-grow para não ocupar todo espaço disponível */
   overflow-y: auto;
-
-  height: 400px;      /* altura fixa */
-  max-width: 400px;   /* largura máxima para deixar quadrado */
-  margin-left: 20px; /* margem esquerda de 20px */
+  height: 400px;
+  max-width: 400px;
+  margin-left: 20px;
 }
 
 /* Cards menores e retangulares */
@@ -40,8 +38,7 @@ header {
   border-radius: 14px;
   cursor: pointer;
   overflow: hidden;
-  display: flex
-;
+  display: flex;
   flex-direction: row;
   user-select: none;
   transition: transform 0.25s ease;
@@ -53,7 +50,7 @@ header {
 }
 
 .card img {
-  width: 70px; /* largura menor */
+  width: 70px;
   height: 100%;
   object-fit: cover;
   border-top-left-radius: 14px;
@@ -93,7 +90,7 @@ header {
 }
 
 #backBtn:hover {
-  background-color: hsl(240 7% 14% / 1);;
+  background-color: hsl(240 7% 14% / 1);
 }
 
 #movieTitle {
@@ -126,6 +123,46 @@ header {
   background-color: #1ebd5a;
 }
 
+/* Player de vídeo */
+#playerSection {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  z-index: 10000;
+}
+
+#closePlayerBtn {
+  background-color: #111;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.video-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  max-width: 640px;
+  max-height: 360px;
+  border: none;
+}
+
 /* Botão WhatsApp */
 #whatsappBtn {
   position: fixed;
@@ -152,7 +189,7 @@ header {
   display: none !important;
 }
 
-/* Esconder elementos com a classe hidden */
+/* Esconder elementos */
 .hidden {
   display: none !important;
 }
@@ -209,7 +246,7 @@ header {
   background-color: hsl(240 7% 17% / 1);
 }
 
-/* === Estilos para o menu interativo do WhatsApp === */
+/* Menu WhatsApp */
 #whatsappMenu {
   display: none;
   position: fixed;
@@ -219,7 +256,7 @@ header {
   color: white;
   border-radius: 10px;
   padding: 15px;
-  width: 280px; /* sombra verde clara */
+  width: 280px;
   z-index: 1000;
   transition: all 0.3s ease;
 }
@@ -276,14 +313,14 @@ header {
   background-color: #1ebd5a;
 }
 
-/* Linha 7 do modal com cor diferente */
+/* Termo em destaque */
 .highlight-term {
-  color: #ff6666; /* vermelho claro */
+  color: #ff6666;
   font-weight: 700;
   margin-bottom: 12px;
 }
 
-/* Caixa dentro do modal, com design igual ao modal-content */
+/* Caixa no modal */
 .highlight-box {
   background-color: hsl(240 7% 14% / 1);
   border-radius: 10px;
