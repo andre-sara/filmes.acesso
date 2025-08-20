@@ -408,9 +408,12 @@ function openPlayer(link) {
     playerFrame.src = link;
   }
 
-  // esconder biblioteca e detalhes e mostrar o overlay
+  // esconder biblioteca e detalhes
   library.classList.add('hidden');
   detailsEl.classList.add('hidden');
+
+  // REMOVER a classe hidden (que tem !important) e mostrar o overlay
+  playerSection.classList.remove('hidden');
   playerSection.style.display = 'flex';
 
   // bloquear rolagem da página enquanto o player estiver aberto
@@ -424,6 +427,7 @@ document.getElementById('closePlayerBtn').addEventListener('click', () => {
 
   playerFrame.src = '';
   playerSection.style.display = 'none';
+  playerSection.classList.add('hidden');
 
   // volta para a lista de episódios (mantém a página nos detalhes)
   details.classList.remove('hidden');
@@ -431,9 +435,6 @@ document.getElementById('closePlayerBtn').addEventListener('click', () => {
   // permitir rolagem novamente
   document.documentElement.style.overflow = '';
   document.body.style.overflow = '';
-
-  // opcional: se quiser mostrar a biblioteca em vez de detalhes, use:
-  // library.classList.remove('hidden');
 });
 
 // === Botão WhatsApp com menu interativo ===
