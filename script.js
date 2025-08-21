@@ -3,9 +3,9 @@ const movies = [
    {
     title: "Cinderela 2015",
     image: "https://upload.wikimedia.org/wikipedia/pt/c/c2/Cinderella_2015_official_poster.jpg",
-    disable: true, // desabilitado = false
+    enabled: true, // desabilitado = false
     episodes: [
-      { name: "Filme Completo", link: "" },
+      { name: "Filme Completo", link: "https://1024terabox.com/s/1MqxhHeDtHLatWS1PDbtvNg" },
     ],
   },
    {
@@ -491,4 +491,5 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
