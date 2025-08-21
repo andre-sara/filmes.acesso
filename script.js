@@ -1,6 +1,14 @@
 // Lista de filmes (exemplo) com propriedade "enabled" para controlar visibilidade
 const movies = [
    {
+    title: "Cinderela 2015",
+    image: "https://upload.wikimedia.org/wikipedia/pt/c/c2/Cinderella_2015_official_poster.jpg",
+    disable: true, // desabilitado = false
+    episodes: [
+      { name: "Filme Completo", link: "" },
+    ],
+  },
+   {
     title: "Superman 2025",
     image: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQFgxfqC60z1VjcC151bjgVNl9RhH9Tg6N8jDMkqQN0zsMCwLbV",
     enabled: true, // desabilitado = false
@@ -483,3 +491,4 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
