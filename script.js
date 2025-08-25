@@ -28,7 +28,7 @@ const movies = [
       { name: "Episódio 5", link: "https://drive.google.com/file/d/1-pgLx1L6TB6PhboeVkmxnqQ9wbzazeHg/view?usp=drive_link" },
       { name: "Episódio 6", link: "https://drive.google.com/file/d/1trpZNZy6wMN6OXERXhCBRWLJE-2ZgMVo/view?usp=drive_link" },
       { name: "Episódio 7", link: "https://drive.google.com/file/d/1z9ZGqNlNsv3cJpItwhTNC7wyMvoZKSfN/view?usp=drive_link" },
-      { name: "O Episódio 8 último episódio da série, estará disponível somente em 25/08/2025.", link: "https://drive.google.com/naoexistelogovaiserindexado" },
+      { name: "Episódio 8 - Final", link: "https://drive.google.com/file/d/1d3fKuEtJ2bo6Mq1RbWvUFd8-3Htz3Y5m/view?usp=drive_link" },
     ],
   },
   {
@@ -491,6 +491,7 @@ function autoGrow(textarea) {
   textarea.style.height = 'auto';
   textarea.style.height = (textarea.scrollHeight) + "px";
 }
+
 
 
 
